@@ -1,0 +1,31 @@
+<!DOCTYPE hibernate-configuration PUBLIC
+	"-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+	"http://hibernate.sourceforge.net/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+
+   <session-factory>
+   <property name="hibernate.dialect">
+      org.hibernate.dialect.MySQLDialect
+   </property>
+   <property name="hibernate.connection.driver_class">
+      com.mysql.jdbc.Driver
+   </property>
+
+   <property name="hibernate.connection.url">
+      jdbc:mysql://localhost/shopping
+   </property>
+   <property name="hibernate.connection.username">
+      root
+   </property>
+   <property name="hibernate.connection.password">
+      newpwd
+   </property>
+		<mapping class="com.shopp.shoppingcart.model.User"/>
+		<mapping class="com.shopp.shoppingcart.model.Authority"/>		
+		<mapping class="com.shopp.shoppingcart.model.Product"/>
+		<mapping class="com.shopp.shoppingcart.model.Sale"/>
+		<mapping class="com.shopp.shoppingcart.model.Pay"/>
+		<mapping class="com.shopp.shoppingcart.model.Category"/>
+		<mapping class="com.shopp.shoppingcart.model.LineSale"/>
+    </session-factory>
+</hibernate-configuration>
